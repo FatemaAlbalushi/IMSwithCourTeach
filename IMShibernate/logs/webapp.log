@@ -1,0 +1,38 @@
+2023-04-13 01:45:36.030 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h25m49s311ms147µs100ns).
+2023-04-13 02:13:35.083 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-04-13 02:13:35.141 INFO  c.I.I.ImShibernateApplication - Starting ImShibernateApplication using Java 17.0.2 with PID 7900 (C:\Users\LAP-10\Documents\UI\InstituteManagementSystemUIwithPhoto\IMShibernate\target\classes started by LAP-10 in C:\Users\LAP-10\Documents\UI\InstituteManagementSystemUIwithPhoto\IMShibernate)
+2023-04-13 02:13:35.143 INFO  c.I.I.ImShibernateApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-13 02:13:36.174 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 02:13:36.262 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2023-04-13 02:13:37.013 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-04-13 02:13:37.026 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-13 02:13:37.027 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-13 02:13:37.028 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-13 02:13:37.157 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-13 02:13:37.158 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1947 ms
+2023-04-13 02:13:37.396 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 02:13:37.459 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-13 02:13:37.667 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-04-13 02:13:37.833 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-13 02:13:38.265 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20c3b34b
+2023-04-13 02:13:38.267 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-13 02:13:38.344 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-13 02:13:39.431 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 02:13:39.443 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 02:13:39.986 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 02:13:41.151 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79a92277, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7712df76, org.springframework.security.web.context.SecurityContextHolderFilter@7a85454b, org.springframework.security.web.header.HeaderWriterFilter@5192b301, org.springframework.web.filter.CorsFilter@e98adb2, org.springframework.security.web.authentication.logout.LogoutFilter@30eee098, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3e7ddb7e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@739be7ec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1df2e767, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c3d0ff8, org.springframework.security.web.access.ExceptionTranslationFilter@da4c5cb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@519eab1e]
+2023-04-13 02:13:41.446 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-13 02:13:41.474 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-13 02:13:41.487 INFO  c.I.I.ImShibernateApplication - Started ImShibernateApplication in 6.696 seconds (process running for 7.598)
+2023-04-13 02:13:57.887 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 02:13:57.888 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-13 02:13:57.890 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-04-13 02:13:58.827 INFO  c.I.I.Service.StudentService - Created student with id: 702
+2023-04-13 02:14:22.523 INFO  c.I.I.Service.StudentService - Created student with id: 703
+2023-04-13 02:14:22.579 INFO  c.I.I.Service.StudentService - updated student with id: 703
+2023-04-13 02:14:28.548 INFO  c.I.I.Service.StudentService - Getting all student
+2023-04-13 02:14:40.375 INFO  c.I.I.Service.StudentService - get student with id: 703
+2023-04-13 02:14:40.633 INFO  c.I.I.Service.StudentService - get student with id: 703
+2023-04-13 02:22:29.933 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 02:22:29.937 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-13 02:22:29.946 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
