@@ -34,7 +34,8 @@ public class CourseService {
 
     public Course registerCourse(Course course) {
         logger.info("Created course with id: " + course.Courseid);
-        return courseRepository.save(course);
+         courseRepository.save(course);
+        return course;
     }
 
     public Optional<Course> updateCourse(int id, Course updatedCourse) {
@@ -43,7 +44,7 @@ public class CourseService {
                 (currCourse)->{
 //                    currCourse.Courseid = updatedCourse.Courseid;
                     currCourse.CourseName= updatedCourse.CourseName;
-//                    currCourse.CourseDescription= updatedCourse.CourseDescription;
+                   currCourse.CourseDescription= updatedCourse.CourseDescription;
 
                     courseRepository.save(currCourse);
                 }

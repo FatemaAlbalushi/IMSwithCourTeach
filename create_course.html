@@ -1,10 +1,10 @@
-<!-- read_student.html -->
+<!-- create_Course.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IMS - Read Student</title>
+  <title>IMS - Create Course</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -50,69 +50,50 @@
   </header>
 
   <main>
-    <section id="read-student">
-      <h2>Read Student</h2>
-      <form id = "readstudentForm">
-        <label for="readstudent-id">student ID:</label>
-        <input type="text" id="readstudent-id" name="readstudent-id" required>
+    <section id="create-course">
+      <h2>Create Course</h2>
+      <form id= "createcourseForm">
+        <label for="name">Name:</label>
+        <input type="text" id="createcoursename" name="createcoursename" required>
 
-        <button type="submit">Read</button>
+        <label for="Description">Description:</label>
+        <input type="text" id="createcourseDescription" name="createcourseDescription" required>
+
+        <button type="submit">Create</button>
       </form>
-      
-      <table id="studentTable">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-
     </section>
   </main>
 
   <script>
     const storedUsername = localStorage.getItem("username");
     const storedPassword = localStorage.getItem("password");
-    document.getElementById("readstudentForm").addEventListener("submit",(event)=>{
+    document.getElementById("createcourseForm").addEventListener("submit",(event)=>{
       event.preventDefault();
-      let id = document.querySelector('#readstudent-id').value;
+      let Name = document.querySelector('#createcoursename').value;
+      let Description = document.querySelector('#createcourseDescription').value;
+      
 
-      let url = `http://localhost:8080/api/student/${id}`;
-      let table = document.querySelector("#studentTable tbody");
-         table.innerHTML = '';
+      let url =`http://localhost:8080/api/course`;
 
-         let reqCongig = {
-          method: "GET",
-          headers : {
+    let reqConfig = {
+    method: "POST",
+    headers : {
       "Content-Type" :"application/json;charset=UTF-8" ,
       'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
-}
+    body: JSON.stringify({CourseName:Name , CourseDescription:Description})
+  }
+  fetch(url,reqConfig)
+  .then((response) => {
+          if (response.ok) {
+            alert(`Course Created successfully.`);
+          } else {
+            alert(`Failed to Create Course.`);
 
-    fetch(url,reqCongig)
-      .then((response) => {return response.json();})
-      .then(data => {
-
-        console.log(data);
-      const row = document.createElement('tr');
-      const idCell = document.createElement('td');
-      const nameCell = document.createElement('td');
-      const emailCell = document.createElement('td');
-      idCell.textContent = data.Stusentid;
-      nameCell.textContent = data.Studentname;
-      emailCell.textContent = data.Studentemail;
-      row.appendChild(idCell);
-      row.appendChild(nameCell);
-      row.appendChild(emailCell);
-      table.appendChild(row);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+          }
+        })
+  .then((parsedResponse) =>{console.log(parsedResponse);})
     });
+
     document.querySelector('.logout').addEventListener('click', function(event) {
       event.preventDefault();
       alert(`Are you sure you went to logout?.`);
@@ -122,8 +103,7 @@
        window.location.href = 'index.html';
       }
 });
-
-  
+    
   </script>
   <footer>
     <div class="container">

@@ -1,10 +1,10 @@
-<!-- read_student.html -->
+<!-- read_Teacher.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IMS - Read Student</title>
+  <title>IMS - Read Teacher</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -50,46 +50,46 @@
   </header>
 
   <main>
-    <section id="read-student">
-      <h2>Read Student</h2>
-      <form id = "readstudentForm">
-        <label for="readstudent-id">student ID:</label>
-        <input type="text" id="readstudent-id" name="readstudent-id" required>
+    <section id="read-Teacher">
+      <h2>Read Teacher</h2>
+      <form id= "readTeacherForm">
+        <label for="Teacher-id">Teacher ID:</label>
+        <input type="text" id="readTeacher-id" name="readTeacher-id" required>
 
         <button type="submit">Read</button>
       </form>
-      
+
       <table id="studentTable">
         <thead>
           <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Salary</th>
           </tr>
         </thead>
         <tbody>
         </tbody>
       </table>
-
     </section>
   </main>
 
   <script>
     const storedUsername = localStorage.getItem("username");
     const storedPassword = localStorage.getItem("password");
-    document.getElementById("readstudentForm").addEventListener("submit",(event)=>{
+    document.getElementById("readTeacherForm").addEventListener("submit",(event)=>{
       event.preventDefault();
-      let id = document.querySelector('#readstudent-id').value;
-
-      let url = `http://localhost:8080/api/student/${id}`;
+      let id = document.querySelector('#readTeacher-id').value;
+      
+      let url = `http://localhost:8080/api/Teacher/${id}`;
       let table = document.querySelector("#studentTable tbody");
          table.innerHTML = '';
 
          let reqCongig = {
           method: "GET",
           headers : {
-      "Content-Type" :"application/json;charset=UTF-8" ,
-      'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
+        "Content-Type" :"application/json;charset=UTF-8" ,
+        'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
 }
 
     fetch(url,reqCongig)
@@ -101,12 +101,15 @@
       const idCell = document.createElement('td');
       const nameCell = document.createElement('td');
       const emailCell = document.createElement('td');
-      idCell.textContent = data.Stusentid;
-      nameCell.textContent = data.Studentname;
-      emailCell.textContent = data.Studentemail;
+      const sallaryCall = document.createElement('td');
+      idCell.textContent = data.TeacherId;
+      nameCell.textContent = data.TeacherName;
+      emailCell.textContent = data.TeacherEmail;
+      sallaryCall.textContent = data.salary;
       row.appendChild(idCell);
       row.appendChild(nameCell);
       row.appendChild(emailCell);
+      row.appendChild(sallaryCall);
       table.appendChild(row);
       })
       .catch((error) => {
@@ -123,8 +126,8 @@
       }
 });
 
-  
   </script>
+
   <footer>
     <div class="container">
       <p>&copy; 2023 Institute Management Service</p>

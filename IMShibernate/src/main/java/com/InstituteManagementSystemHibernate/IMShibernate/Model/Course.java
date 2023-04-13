@@ -15,7 +15,8 @@ public class Course {
     public int Courseid;
     @Column
     public String CourseName;
-
+    @Column
+    public String CourseDescription;
 
     @OneToOne(optional = true, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "teacher_id", referencedColumnName = "TeacherId")
