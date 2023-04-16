@@ -66,6 +66,7 @@
             <th>ID</th>
             <th>Name</th>
             <th>Description</th>
+            <th>Teacher-id</th>
           </tr>
         </thead>
         <tbody>
@@ -105,9 +106,29 @@
       idCell.textContent = data.Courseid;
       nameCell.textContent = data.CourseName;
       DescriptionCell.textContent = data.CourseDescription;
+      const Teacher_idCell = document.createElement('td');
+      let teacherUrl = 'http://localhost:8080/api/teacher/' + data.CourseMentor;
+      let teacherReqConfig = {
+        method: "GET",
+        headers : {
+          "Content-Type" :"application/json;charset=UTF-8" ,
+          'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)}
+      };
+
+      fetch(teacherUrl, teacherReqConfig)
+        .then(response => response.json())
+        .then(teacher => {
+          Teacher_idCell.textContent = teacher.TeacherId;
+          row.appendChild(Teacher_idCell);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+
       row.appendChild(idCell);
       row.appendChild(nameCell);
       row.appendChild(DescriptionCell);
+      row.appendChild(Teacher_idCell);
       table.appendChild(row);
       })
       .catch((error) => {
@@ -123,8 +144,6 @@
        window.location.href = 'index.html';
       }
 });
-
-  
   </script>
   <footer>
     <div class="container">

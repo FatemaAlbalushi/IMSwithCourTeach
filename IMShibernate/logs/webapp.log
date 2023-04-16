@@ -218,3 +218,61 @@
 2023-04-16 12:52:56.321 INFO  c.I.I.Service.CourseService - Updated course with id: 3
 2023-04-16 12:53:03.615 INFO  c.I.I.Service.CourseService - Getting all courses
 2023-04-16 12:53:31.813 INFO  c.I.I.Service.CourseService - Getting course with id: 3
+2023-04-16 12:53:31.832 INFO  c.I.I.Service.CourseService - Created course with id: 3
+2023-04-16 12:58:38.415 INFO  c.I.I.Service.CourseService - Getting course with id: 3
+2023-04-16 12:58:40.601 INFO  c.I.I.Service.CourseService - Getting course with id: 3
+2023-04-16 12:59:19.110 INFO  c.I.I.Service.CourseService - Getting course with id: 3
+2023-04-16 13:00:47.847 INFO  c.I.I.Service.CourseService - Getting course with id: 3
+2023-04-16 13:02:05.168 INFO  c.I.I.Service.CourseService - Getting course with id: 3
+2023-04-16 13:02:36.870 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:02:37.076 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:02:37.082 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:02:37.087 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:02:44.867 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:02:45.082 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:02:45.094 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:02:45.099 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:02:51.606 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:02:51.816 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:02:51.823 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:02:51.825 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:02:54.256 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:02:56.696 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:02:56.905 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:02:56.915 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:02:56.915 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:03:14.330 INFO  c.I.I.Service.CourseService - Getting course with id: 3
+2023-04-16 13:03:19.566 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:04:03.696 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:04:03.893 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:04:03.909 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:04:03.909 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:04:10.311 INFO  c.I.I.Service.CourseService - Getting course with id: 3
+2023-04-16 13:04:13.935 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:04:14.143 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:04:14.167 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:04:14.168 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:13:07.015 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:13:07.197 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:13:07.206 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:13:07.209 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:13:13.738 INFO  c.I.I.Service.CourseService - Getting course with id: 3
+2023-04-16 13:13:13.944 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:13:24.162 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:13:24.389 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:13:24.396 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:13:24.397 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:13:50.324 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:13:50.537 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:13:50.555 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:13:50.561 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:13:56.248 INFO  c.I.I.Service.CourseService - Getting course with id: 102
+2023-04-16 13:13:56.455 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:15:04.703 INFO  c.I.I.Service.CourseService - Getting course with id: 102
+2023-04-16 13:15:22.550 INFO  c.I.I.Service.StudentService - Created student with id: 953
+2023-04-16 13:15:31.297 INFO  c.I.I.Service.CourseService - Getting course with id: 102
+2023-04-16 13:15:50.148 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-16 13:15:50.368 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:15:50.377 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:15:50.381 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "undefined"]
+2023-04-16 13:16:11.676 INFO  c.I.I.Service.CourseService - Getting all courses

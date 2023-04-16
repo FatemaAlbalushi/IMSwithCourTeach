@@ -1,4 +1,4 @@
-<!-- read_Course.html -->
+<!-- View_Course.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,6 +60,7 @@
             <th>ID</th>
             <th>Name</th>
             <th>Description</th>
+            <th>Teacher-id</th>
           </tr>
         </thead>
         <tbody>
@@ -92,12 +93,33 @@
           const idCell = document.createElement('td');
           const nameCell = document.createElement('td');
           const DescriptionCell = document.createElement('td');
+          const Teacher_idCell = document.createElement('td');
           idCell.textContent = course.Courseid;
           nameCell.textContent = course.CourseName;
           DescriptionCell.textContent = course.CourseDescription;
+
+          let teacherUrl = "http://localhost:8080/api/teacher/" + course.CourseMentor;
+      let teacherReqConfig = {
+        method: "GET",
+        headers : {
+          "Content-Type" :"application/json;charset=UTF-8" ,
+          'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)}
+      };
+
+      fetch(teacherUrl, teacherReqConfig)
+        .then(response => response.json())
+        .then(teacher => {
+          Teacher_idCell.textContent = teacher.TeacherId;
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+
+         
           row.appendChild(idCell);
           row.appendChild(nameCell);
           row.appendChild(DescriptionCell);
+          row.appendChild(Teacher_idCell);
           table.appendChild(row);
         });
       })
