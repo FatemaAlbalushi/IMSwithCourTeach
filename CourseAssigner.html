@@ -1,10 +1,10 @@
-<!-- read_Course.html -->
+<!-- delete_course.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IMS - Read Course</title>
+  <title>IMS - Assign Teacher To Course</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,6 +15,7 @@
         <nav>
           <ul>
             <li><a href="main.html">Home </a></li>
+            
             <li class="active"><a href="#">Students</a>
               <ul>
                 <li><a href="create_student.html">Create Student</a></li>
@@ -51,69 +52,49 @@
   </header>
 
   <main>
-    <section id="read-course">
-      <h2>Read Course</h2>
-      <form id = "readcourseForm">
-        <label for="readcourse-id">Course ID:</label>
-        <input type="text" id="readcourse-id" name="readcourse-id" required>
+    <section id="add-teacher-to-course">
+      <h2>Delete Course</h2>
+      <form id = courseteacherForm>
+        <label for="courseteacher-id">Course ID:</label>
+        <input type="text" id="courseteacher-id" name="courseteacher-id" required>
+        <label for="teachercourse-id">Teacher ID:</label>
+        <input type="text" id="teachercourse-id" name="teachercourse-id" required>
 
-        <button type="submit">Read</button>
+        <button type="submit">Assign</button>
       </form>
-      
-      <table id="courseTable">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-
     </section>
   </main>
 
   <script>
     const storedUsername = localStorage.getItem("username");
     const storedPassword = localStorage.getItem("password");
-    document.getElementById("readcourseForm").addEventListener("submit",(event)=>{
+    document.getElementById("courseteacherForm").addEventListener("submit", (event) => {
       event.preventDefault();
-      let id = document.querySelector('#readcourse-id').value;
-
-      let url = `http://localhost:8080/api/course/${id}`;
-      let table = document.querySelector("#courseTable tbody");
-         table.innerHTML = '';
-
-         let reqCongig = {
-          method: "GET",
-          headers : {
-      "Content-Type" :"application/json;charset=UTF-8" ,
+     
+      let course_id = document.querySelector('#courseteacher-id').value;
+      let teacher_id = document.querySelector('#teachercourse-id').value;
+      let url = 'http://localhost:8080/api/assigner';
+      let reqConfig = {
+        method: "POST",
+        headers : {
+       "Content-Type" :"application/json;charset=UTF-8" ,
       'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
-}
+      body: JSON.stringify({course_id:course_id, teacher_id:teacher_id})
+      };
 
-    fetch(url,reqCongig)
-      .then((response) => {return response.json();})
-      .then(data => {
-
-        console.log(data);
-      const row = document.createElement('tr');
-      const idCell = document.createElement('td');
-      const nameCell = document.createElement('td');
-      const DescriptionCell = document.createElement('td');
-      idCell.textContent = data.Courseid;
-      nameCell.textContent = data.CourseName;
-      DescriptionCell.textContent = data.CourseDescription;
-      row.appendChild(idCell);
-      row.appendChild(nameCell);
-      row.appendChild(DescriptionCell);
-      table.appendChild(row);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+      fetch(url, reqConfig)
+        .then((response) => {
+          if (response.ok) {
+            alert(`Course Assigned successfully.`);
+          } else {
+            alert(`Failed to Assign Course`);
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
     });
+
     document.querySelector('.logout').addEventListener('click', function(event) {
       event.preventDefault();
       alert(`Are you sure you went to logout?.`);
@@ -123,9 +104,8 @@
        window.location.href = 'index.html';
       }
 });
-
-  
   </script>
+
   <footer>
     <div class="container">
       <p>&copy; 2023 Institute Management Service</p>
