@@ -36,3 +36,124 @@
 2023-04-13 02:22:29.933 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-04-13 02:22:29.937 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2023-04-13 02:22:29.946 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-13 03:15:08.553 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-04-13 03:15:08.635 INFO  c.I.I.ImShibernateApplication - Starting ImShibernateApplication using Java 17.0.2 with PID 10100 (C:\Users\LAP-10\Documents\UI\IMSwithTecherCourse\IMShibernate\target\classes started by LAP-10 in C:\Users\LAP-10\Documents\UI\IMSwithTecherCourse\IMShibernate)
+2023-04-13 03:15:08.637 INFO  c.I.I.ImShibernateApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-13 03:15:09.790 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 03:15:09.873 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
+2023-04-13 03:15:10.617 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-04-13 03:15:10.627 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-13 03:15:10.628 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-13 03:15:10.628 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-13 03:15:10.741 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-13 03:15:10.742 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2030 ms
+2023-04-13 03:15:10.961 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 03:15:11.045 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-13 03:15:11.255 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-04-13 03:15:11.422 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-13 03:15:11.830 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d2e6f62
+2023-04-13 03:15:11.832 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-13 03:15:11.874 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-13 03:15:12.880 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 03:15:12.890 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 03:15:13.390 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 03:15:14.427 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f836d9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a4f1bc5, org.springframework.security.web.context.SecurityContextHolderFilter@3eb641a8, org.springframework.security.web.header.HeaderWriterFilter@481c1e92, org.springframework.web.filter.CorsFilter@224e7aa5, org.springframework.security.web.authentication.logout.LogoutFilter@694c0ed1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@396ec737, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61ec2cb5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3889c343, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@89ff043, org.springframework.security.web.access.ExceptionTranslationFilter@5d782a4a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3555d804]
+2023-04-13 03:15:14.763 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-13 03:15:14.784 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-13 03:15:14.795 INFO  c.I.I.ImShibernateApplication - Started ImShibernateApplication in 6.583 seconds (process running for 7.342)
+2023-04-13 03:17:52.711 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 03:17:52.712 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-13 03:17:52.715 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-04-13 03:17:53.604 INFO  c.I.I.Service.StudentService - Created student with id: 752
+2023-04-13 03:18:30.750 INFO  c.I.I.Service.StudentService - Getting all student
+2023-04-13 03:23:17.585 INFO  c.I.I.Service.StudentService - Getting all student
+2023-04-13 03:23:25.433 INFO  c.I.I.Service.StudentService - Getting all student
+2023-04-13 03:23:57.875 INFO  c.I.I.Service.StudentService - Getting all student
+2023-04-13 03:24:03.031 INFO  c.I.I.Service.StudentService - Getting all student
+2023-04-13 03:34:28.060 INFO  c.I.I.Service.StudentService - Getting all student
+2023-04-13 03:34:41.030 INFO  c.I.I.Service.CourseService - Created course with id: 0
+2023-04-13 03:39:33.573 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-13 03:48:26.050 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 03:48:26.054 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-13 03:48:26.060 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-13 03:48:31.104 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-04-13 03:48:31.167 INFO  c.I.I.ImShibernateApplication - Starting ImShibernateApplication using Java 17.0.2 with PID 2284 (C:\Users\LAP-10\Documents\UI\IMSwithTecherCourse\IMShibernate\target\classes started by LAP-10 in C:\Users\LAP-10\Documents\UI\IMSwithTecherCourse\IMShibernate)
+2023-04-13 03:48:31.168 INFO  c.I.I.ImShibernateApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-13 03:48:32.135 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 03:48:32.211 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2023-04-13 03:48:32.859 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-04-13 03:48:32.869 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-13 03:48:32.870 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-13 03:48:32.870 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-13 03:48:32.979 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-13 03:48:32.979 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1744 ms
+2023-04-13 03:48:33.168 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 03:48:33.244 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-13 03:48:33.422 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-04-13 03:48:33.571 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-13 03:48:33.964 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@708769b7
+2023-04-13 03:48:33.970 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-13 03:48:34.047 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-13 03:48:35.017 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 03:48:35.027 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 03:48:35.458 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 03:48:36.616 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@432b883, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f09c282, org.springframework.security.web.context.SecurityContextHolderFilter@5a95aaae, org.springframework.security.web.header.HeaderWriterFilter@6277a496, org.springframework.web.filter.CorsFilter@560c3758, org.springframework.security.web.authentication.logout.LogoutFilter@70dd79f7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@79f59e0e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7402bfe7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d5958d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43414b88, org.springframework.security.web.access.ExceptionTranslationFilter@4df5f119, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4bc4ec43]
+2023-04-13 03:48:36.859 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-13 03:48:36.884 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-13 03:48:36.893 INFO  c.I.I.ImShibernateApplication - Started ImShibernateApplication in 6.082 seconds (process running for 6.666)
+2023-04-13 03:49:37.842 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 03:49:37.843 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-13 03:49:37.846 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-04-13 03:49:38.368 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-13 03:50:13.231 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)]
+2023-04-13 03:50:21.214 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-13 03:50:48.432 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)]
+2023-04-13 03:54:56.482 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 03:54:56.485 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-13 03:54:56.527 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-13 03:55:01.777 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-04-13 03:55:01.833 INFO  c.I.I.ImShibernateApplication - Starting ImShibernateApplication using Java 17.0.2 with PID 3652 (C:\Users\LAP-10\Documents\UI\IMSwithTecherCourse\IMShibernate\target\classes started by LAP-10 in C:\Users\LAP-10\Documents\UI\IMSwithTecherCourse\IMShibernate)
+2023-04-13 03:55:01.835 INFO  c.I.I.ImShibernateApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-13 03:55:02.799 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 03:55:02.865 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
+2023-04-13 03:55:03.566 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-04-13 03:55:03.575 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-13 03:55:03.576 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-13 03:55:03.576 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-13 03:55:03.675 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-13 03:55:03.676 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1781 ms
+2023-04-13 03:55:03.862 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 03:55:03.914 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-13 03:55:04.094 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-04-13 03:55:04.242 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-13 03:55:04.578 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60c98f25
+2023-04-13 03:55:04.580 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-13 03:55:04.657 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-13 03:55:05.517 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 03:55:05.527 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 03:55:05.977 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 03:55:06.955 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1cb73a92, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d3faf1d, org.springframework.security.web.context.SecurityContextHolderFilter@739be7ec, org.springframework.security.web.header.HeaderWriterFilter@2a0881f1, org.springframework.web.filter.CorsFilter@36017835, org.springframework.security.web.authentication.logout.LogoutFilter@3d8e1fa6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@641ab175, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d0d568f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c7aba7c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7207f3c2, org.springframework.security.web.access.ExceptionTranslationFilter@5192b301, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65880400]
+2023-04-13 03:55:07.217 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-13 03:55:07.247 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-13 03:55:07.259 INFO  c.I.I.ImShibernateApplication - Started ImShibernateApplication in 5.748 seconds (process running for 6.332)
+2023-04-13 03:56:19.397 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 03:56:19.399 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-13 03:56:19.400 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-04-13 03:56:20.036 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)]
+2023-04-13 03:57:19.611 INFO  c.I.I.Service.CourseService - Created course with id: 0
+2023-04-13 03:57:23.998 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-13 04:03:05.213 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-13 04:03:10.475 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-13 04:03:17.834 INFO  c.I.I.Service.CourseService - Getting course with id: 102
+2023-04-13 04:03:43.402 INFO  c.I.I.Service.CourseService - Getting course with id: 102
+2023-04-13 04:11:14.014 INFO  c.I.I.Service.CourseService - Getting course with id: 102
+2023-04-13 04:12:45.733 INFO  c.I.I.Service.CourseService - Updated course with id: 102
+2023-04-13 04:12:55.704 INFO  c.I.I.Service.CourseService - Getting course with id: 102
+2023-04-13 04:15:47.493 INFO  c.I.I.Service.CourseService - Getting course with id: 102
+2023-04-13 04:15:54.920 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-13 04:16:08.508 INFO  c.I.I.Service.CourseService - Getting course with id: 52
+2023-04-13 04:16:15.641 INFO  c.I.I.Service.CourseService - Getting course with id: 52
+2023-04-13 04:16:15.703 INFO  c.I.I.Service.CourseService - Deleted course with id: 52
+2023-04-13 04:16:20.760 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-13 04:16:27.141 INFO  c.I.I.Service.CourseService - Getting course with id: 52
+2023-04-13 04:16:40.638 INFO  c.I.I.Service.CourseService - Getting all courses

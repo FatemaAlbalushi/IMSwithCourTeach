@@ -24,13 +24,22 @@
                 <li><a href="viewAllstudent.html">View Student</a></li>
               </ul>
             </li>
-            <li><a href="#">Staff</a>
+            <li><a href="#">Teacher</a>
               <ul>
-                <li class="active"><a href="create_staff.html">Create Staff</a></li>
-                <li><a href="read_staff.html">Read Staff</a></li>
-                <li><a href="update_staff.html">Update Staff</a></li>
-                <li><a href="delete_staff.html">Delete Staff</a></li>
-                <li><a href="viewAllstaff.html">View Staff</a></li>
+                <li class="active"><a href="create_teacher.html">Create Teacher</a></li>
+                <li><a href="read_teacher.html">Read Teacher</a></li>
+                <li><a href="update_teacher.html">Update Teacher</a></li>
+                <li><a href="delete_teacher.html">Delete Teacher</a></li>
+                <li><a href="viewAllteacher.html">View Teacher</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Course</a>
+              <ul>
+                <li class="active"><a href="create_course.html">Create Course</a></li>
+                <li><a href="read_course.html">Read Course</a></li>
+                <li><a href="update_course.html">Update Course</a></li>
+                <li><a href="delete_course.html">Delete Course</a></li>
+                <li><a href="viewAllcourse.html">View Course</a></li>
               </ul>
             </li>
             <li class="active"><a href="#" class="logout">Log out </a></li>
@@ -41,10 +50,10 @@
   </header>
 
   <main>
-    <section id="view-staff">
-      <h2>View Staff</h2>
+    <section id="view-Teacher">
+      <h2>View Teacher</h2>
 
-      <table id="staffTable">
+      <table id="TeacherTable">
         <thead>
           <tr>
             <th>ID</th>
@@ -62,8 +71,8 @@
   <script>
     const storedUsername = localStorage.getItem("username");
     const storedPassword = localStorage.getItem("password");
-    let url = "http://localhost:8080/api/staff";
-    let table = document.querySelector("#staffTable tbody");
+    let url = "http://localhost:8080/api/Teacher";
+    let table = document.querySelector("#TeacherTable tbody");
     table.innerHTML = '';
 
     let reqCongig = {
@@ -78,16 +87,16 @@
       .then(data => {
         console.log(data);
 
-        data.forEach(staff => {
+        data.forEach(Teacher => {
           const row = document.createElement('tr');
           const idCell = document.createElement('td');
           const nameCell = document.createElement('td');
           const emailCell = document.createElement('td');
           const sallaryCall = document.createElement('td');
-          idCell.textContent = staff.StaffId;
-          nameCell.textContent = staff.StaffName;
-          emailCell.textContent = staff.StaffEmail;
-          sallaryCall.textContent = staff.salary;
+          idCell.textContent = Teacher.TeacherId;
+          nameCell.textContent = Teacher.TeacherName;
+          emailCell.textContent = Teacher.TeacherEmail;
+          sallaryCall.textContent = Teacher.salary;
           row.appendChild(idCell);
           row.appendChild(nameCell);
           row.appendChild(emailCell);

@@ -1,10 +1,10 @@
-<!-- create_staff.html -->
+<!-- create_Teacher.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IMS - Create Staff</title>
+  <title>IMS - Create Teacher</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,13 +24,22 @@
                 <li><a href="viewAllstudent.html">View Student</a></li>
               </ul>
             </li>
-            <li><a href="#">satffs</a>
+            <li><a href="#">Teachers</a>
               <ul>
-                <li class="active"><a href="create_staff.html">Create Satff</a></li>
-                <li><a href="read_staff.html">Read Satff</a></li>
-                <li><a href="update_staff.html">Update Satff</a></li>
-                <li><a href="delete_staff.html">Delete Satff</a></li>
-                <li><a href="viewAllstaff.html">View Staff</a></li>
+                <li class="active"><a href="create_teacher.html">Create Teacher</a></li>
+                <li><a href="read_teacher.html">Read Teacher</a></li>
+                <li><a href="update_teacher.html">Update Teacher</a></li>
+                <li><a href="delete_teacher.html">Delete Teacher</a></li>
+                <li><a href="viewAllteacher.html">View Teacher</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Course</a>
+              <ul>
+                <li class="active"><a href="create_course.html">Create Course</a></li>
+                <li><a href="read_course.html">Read Course</a></li>
+                <li><a href="update_course.html">Update Course</a></li>
+                <li><a href="delete_course.html">Delete Course</a></li>
+                <li><a href="viewAllcourse.html">View Course</a></li>
               </ul>
             </li>
             <li class="active"><a href="index.html">Log out </a></li>
@@ -41,17 +50,17 @@
   </header>
 
   <main>
-    <section id="create-staff">
-      <h2>Create Staff</h2>
-      <form id= "createstaffForm">
+    <section id="create-Teacher">
+      <h2>Create Teacher</h2>
+      <form id= "createTeacherForm">
         <label for="name">Name:</label>
-        <input type="text" id="createstaffname" name="createstaffname" required>
+        <input type="text" id="createTeachername" name="createTeachername" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="createstaffemail" name="createstaffemail" required>
+        <input type="email" id="createTeacheremail" name="createTeacheremail" required>
 
         <label for="salary">Salary:</label>
-        <input type="number" id="createstaffsalary" name="createstaffsalary" required>
+        <input type="number" id="createTeachersalary" name="createTeachersalary" required>
 
         <button type="submit">Create</button>
       </form>
@@ -60,28 +69,28 @@
   <script>
     const storedUsername = localStorage.getItem("username");
     const storedPassword = localStorage.getItem("password");
-    document.getElementById("createstaffForm").addEventListener("submit",(event)=>{
+    document.getElementById("createTeacherForm").addEventListener("submit",(event)=>{
       event.preventDefault();
-      let Name = document.querySelector('#createstaffname').value;
-      let Email = document.querySelector('#createstaffemail').value;
-      let Salary = document.querySelector('#createstaffsalary').value;
+      let Name = document.querySelector('#createTeachername').value;
+      let Email = document.querySelector('#createTeacheremail').value;
+      let Salary = document.querySelector('#createTeachersalary').value;
       console.log("the values are here");
 
-      let url =`http://localhost:8080/api/staff`;
+      let url =`http://localhost:8080/api/Teacher`;
 
     let reqConfig = {
     method: "POST",
     headers : {"Content-Type" :"application/json;charset=UTF-8" ,
     'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
-    body: JSON.stringify({StaffName:Name, StaffEmail:Email, salary:Salary})
+    body: JSON.stringify({TeacherName:Name, TeacherEmail:Email, salary:Salary})
   }
   fetch(url,reqConfig)
   .then((response) => {
     //return response.json();
     if (response.ok) {
-            alert(`Staff Created successfully.`);
+            alert(`Teacher Created successfully.`);
           } else {
-            alert(`Failed to Create Staff.`);
+            alert(`Failed to Create Teacher.`);
           }
         
   })

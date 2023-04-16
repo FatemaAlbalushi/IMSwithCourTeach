@@ -1,10 +1,10 @@
-<!-- read_staff.html -->
+<!-- read_Course.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IMS - Read Staff</title>
+  <title>IMS - Read Course</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,13 +24,22 @@
                 <li><a href="viewAllstudent.html">View Student</a></li>
               </ul>
             </li>
-            <li><a href="#">Staffs</a>
+            <li><a href="#">Teachers</a>
               <ul>
-                <li class="active"><a href="create_staff.html">Create Staff</a></li>
-                <li><a href="read_staff.html">Read Staff</a></li>
-                <li><a href="update_staff.html">Update Staff</a></li>
-                <li><a href="delete_staff.html">Delete Staff</a></li>
-                <li><a href="viewAllstaff.html">View Staff</a></li>
+                <li class="active"><a href="create_teacher.html">Create Teacher</a></li>
+                <li><a href="read_teacher.html">Read Teacher</a></li>
+                <li><a href="update_teacher.html">Update Teacher</a></li>
+                <li><a href="delete_teacher.html">Delete Teacher</a></li>
+                <li><a href="viewAllteacher.html">View Teacher</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Course</a>
+              <ul>
+                <li class="active"><a href="create_course.html">Create Course</a></li>
+                <li><a href="read_course.html">Read Course</a></li>
+                <li><a href="update_course.html">Update Course</a></li>
+                <li><a href="delete_course.html">Delete Course</a></li>
+                <li><a href="viewAllcourse.html">View Course</a></li>
               </ul>
             </li>
             <li class="active"><a href="#" class="logout">Log out </a></li>
@@ -41,46 +50,46 @@
   </header>
 
   <main>
-    <section id="read-staff">
-      <h2>Read Staff</h2>
-      <form id= "readstaffForm">
-        <label for="staff-id">Staff ID:</label>
-        <input type="text" id="readstaff-id" name="readstaff-id" required>
+    <section id="read-course">
+      <h2>Read Course</h2>
+      <form id = "readcourseForm">
+        <label for="readcourse-id">Course ID:</label>
+        <input type="text" id="readcourse-id" name="readcourse-id" required>
 
         <button type="submit">Read</button>
       </form>
-
-      <table id="studentTable">
+      
+      <table id="courseTable">
         <thead>
           <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Email</th>
-            <th>Salary</th>
+            <th>Description</th>
           </tr>
         </thead>
         <tbody>
         </tbody>
       </table>
+
     </section>
   </main>
 
   <script>
     const storedUsername = localStorage.getItem("username");
     const storedPassword = localStorage.getItem("password");
-    document.getElementById("readstaffForm").addEventListener("submit",(event)=>{
+    document.getElementById("readcourseForm").addEventListener("submit",(event)=>{
       event.preventDefault();
-      let id = document.querySelector('#readstaff-id').value;
-      
-      let url = `http://localhost:8080/api/staff/${id}`;
-      let table = document.querySelector("#studentTable tbody");
+      let id = document.querySelector('#readcourse-id').value;
+
+      let url = `http://localhost:8080/api/course/${id}`;
+      let table = document.querySelector("#courseTable tbody");
          table.innerHTML = '';
 
          let reqCongig = {
           method: "GET",
           headers : {
-        "Content-Type" :"application/json;charset=UTF-8" ,
-        'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
+      "Content-Type" :"application/json;charset=UTF-8" ,
+      'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
 }
 
     fetch(url,reqCongig)
@@ -91,16 +100,13 @@
       const row = document.createElement('tr');
       const idCell = document.createElement('td');
       const nameCell = document.createElement('td');
-      const emailCell = document.createElement('td');
-      const sallaryCall = document.createElement('td');
-      idCell.textContent = data.StaffId;
-      nameCell.textContent = data.StaffName;
-      emailCell.textContent = data.StaffEmail;
-      sallaryCall.textContent = data.salary;
+      const DescriptionCell = document.createElement('td');
+      idCell.textContent = data.Courseid;
+      nameCell.textContent = data.CourseName;
+      DescriptionCell.textContent = data.CourseDescription;
       row.appendChild(idCell);
       row.appendChild(nameCell);
-      row.appendChild(emailCell);
-      row.appendChild(sallaryCall);
+      row.appendChild(DescriptionCell);
       table.appendChild(row);
       })
       .catch((error) => {
@@ -117,8 +123,8 @@
       }
 });
 
+  
   </script>
-
   <footer>
     <div class="container">
       <p>&copy; 2023 Institute Management Service</p>
