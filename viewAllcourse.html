@@ -97,24 +97,7 @@
           idCell.textContent = course.Courseid;
           nameCell.textContent = course.CourseName;
           DescriptionCell.textContent = course.CourseDescription;
-
-          let teacherUrl = "http://localhost:8080/api/teacher/" + course.CourseMentor;
-      let teacherReqConfig = {
-        method: "GET",
-        headers : {
-          "Content-Type" :"application/json;charset=UTF-8" ,
-          'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)}
-      };
-
-      fetch(teacherUrl, teacherReqConfig)
-        .then(response => response.json())
-        .then(teacher => {
-          Teacher_idCell.textContent = teacher.TeacherId;
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-
+          Teacher_idCell.textContent = course.teacher_id;
          
           row.appendChild(idCell);
           row.appendChild(nameCell);
