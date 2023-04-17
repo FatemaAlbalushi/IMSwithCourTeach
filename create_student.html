@@ -26,7 +26,7 @@
             </li>
             <li><a href="#">Teachers</a>
               <ul>
-                <li class="active"><a href="create_teacher.html">Create Teacher</a></li>
+                <li class="active"><a href="create_Teacher.html">Create Teacher</a></li>
                 <li><a href="read_teacher.html">Read Teacher</a></li>
                 <li><a href="update_teacher.html">Update Teacher</a></li>
                 <li><a href="delete_teacher.html">Delete Teacher</a></li>
@@ -60,6 +60,8 @@
         <label for="email">Email:</label>
         <input type="email" id="createstudentemail" name="createstudentemail" required>
 
+        <label for="image">upload Image:</label>
+        <input type="file" id="createstudentImage" name="createstudentImage">
         <button type="submit">Create</button>
       </form>
     </section>
@@ -72,17 +74,22 @@
       event.preventDefault();
       let Name = document.querySelector('#createstudentname').value;
       let Email = document.querySelector('#createstudentemail').value;
-      console.log("the values are here");
+      let Image = document.querySelector('#createstudentImage').files[0];
+     
+let curForm = new FormData();
+curForm.append("name",Name);
+curForm.append("email",Email);
+curForm.append("image",Image);
 
-      let url =`http://localhost:8080/api/student`;
-
+      
+    let url =`http://localhost:8080/api/student/withImage`;
     let reqConfig = {
     method: "POST",
     headers : {
-      "Content-Type" :"application/json;charset=UTF-8" ,
       'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
-    body: JSON.stringify({Studentname:Name, Studentemail:Email})
+    body: curForm
   }
+  
   fetch(url,reqConfig)
   .then((response) => {
           if (response.ok) {
