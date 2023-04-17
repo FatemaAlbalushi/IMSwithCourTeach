@@ -69,7 +69,7 @@
     document.getElementById("deleteTeacherForm").addEventListener("submit", (event) => {
       event.preventDefault();
       let id = document.querySelector("#deleteTeacher-id").value;
-      let url = `http://localhost:8080/api/Teacher/${id}`;
+      let url = `http://localhost:8080/api/teacher/${id}`;
       let reqConfig = {
         method: "DELETE",
         headers : {

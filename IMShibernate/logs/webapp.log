@@ -7,3 +7,23 @@
 2023-04-17 09:03:57.398 INFO  c.I.I.Service.CourseService - Getting course with id: 102
 2023-04-17 09:04:37.987 INFO  c.I.I.Service.CourseService - Getting all courses
 2023-04-17 09:04:50.151 INFO  c.I.I.Service.CourseService - Getting course with id: 102
+2023-04-17 09:32:25.434 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m22s805ms930µs700ns).
+2023-04-17 09:42:05.810 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-17 09:42:13.940 WARN  o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-04-17 09:42:35.963 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-17 09:44:29.896 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-17 09:44:46.245 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-17 09:49:43.141 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-17 09:49:43.365 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "null"]
+2023-04-17 09:50:16.854 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-17 09:50:17.086 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "null"]
+2023-04-17 09:50:39.984 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-17 09:50:40.136 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "null"]
+2023-04-17 09:54:03.456 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-17 09:54:03.634 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "null"]
+2023-04-17 09:54:34.946 INFO  c.I.I.Service.CourseService - Getting course with id: 1
+2023-04-17 09:54:35.215 INFO  c.I.I.Service.CourseService - Deleted course with id: 1
+2023-04-17 09:54:42.107 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-17 09:54:51.220 INFO  c.I.I.Service.TeacherService - Getting all Teacher
+2023-04-17 09:54:57.682 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-17 09:56:18.545 INFO  c.I.I.Service.CourseService - Getting all courses

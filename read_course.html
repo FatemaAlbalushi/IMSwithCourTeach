@@ -66,7 +66,7 @@
             <th>ID</th>
             <th>Name</th>
             <th>Description</th>
-            <th>Teacher-id</th>
+            <th>Teacher Name</th>
           </tr>
         </thead>
         <tbody>
@@ -103,18 +103,34 @@
       const idCell = document.createElement('td');
       const nameCell = document.createElement('td');
       const DescriptionCell = document.createElement('td');
-      const Teacher_idCell = document.createElement('td');
+      const TeachernameCell = document.createElement('td');
       idCell.textContent = data.Courseid;
       nameCell.textContent = data.CourseName;
       DescriptionCell.textContent = data.CourseDescription;
-      Teacher_idCell.textContent = data.teacher_id;
       
+
+      let url = `http://localhost:8080/api/teacher/${data.teacher_id}`;
+         let reqCongig = {
+          method: "GET",
+          headers : {
+        "Content-Type" :"application/json;charset=UTF-8" ,
+        'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
+}
+    fetch(url,reqCongig)
+      .then((response) => {return response.json();})
+      .then(data => {
+        console.log(data);
+        TeachernameCell.textContent = data.TeacherName;      
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
       
 
       row.appendChild(idCell);
       row.appendChild(nameCell);
       row.appendChild(DescriptionCell);
-      row.appendChild(Teacher_idCell);
+      row.appendChild(TeachernameCell);
       table.appendChild(row);
       })
       .catch((error) => {
