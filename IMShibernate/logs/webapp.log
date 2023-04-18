@@ -15,3 +15,4 @@
 2023-04-18 09:08:43.087 INFO  c.I.I.Service.CourseService - Getting all courses
 2023-04-18 09:09:31.329 INFO  c.I.I.Service.CourseService - Getting all courses
 2023-04-18 09:09:46.721 INFO  c.I.I.Service.CourseService - Getting course with id: 152
+2023-04-18 09:10:12.588 INFO  c.I.I.Service.CourseService - Getting all courses
