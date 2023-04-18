@@ -1,1 +1,17 @@
 2023-04-18 07:23:50.912 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17h41m34s303ms907µs400ns).
+2023-04-18 08:32:31.115 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s819ms891µs700ns).
+2023-04-18 08:54:18.450 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-18 08:54:30.047 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-18 08:55:09.478 INFO  c.I.I.Service.CourseService - Created course with id: 0
+2023-04-18 08:55:14.467 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-18 08:55:14.636 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "null"]
+2023-04-18 09:06:17.887 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-18 09:06:18.285 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "null"]
+2023-04-18 09:06:24.701 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-18 09:06:24.980 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "null"]
+2023-04-18 09:07:23.778 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-18 09:07:24.006 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "null"]
+2023-04-18 09:08:21.173 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-18 09:08:43.087 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-18 09:09:31.329 INFO  c.I.I.Service.CourseService - Getting all courses
+2023-04-18 09:09:46.721 INFO  c.I.I.Service.CourseService - Getting course with id: 152

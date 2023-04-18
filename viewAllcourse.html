@@ -99,24 +99,30 @@
           nameCell.textContent = course.CourseName;
           DescriptionCell.textContent = course.CourseDescription;
           Teacher_idCell.textContent = course.teacher_id;
-      
+       
+if (course.teacher_id) {
       let url = `http://localhost:8080/api/teacher/${course.teacher_id}`;
-         let reqCongig = {
-          method: "GET",
-          headers : {
-        "Content-Type" :"application/json;charset=UTF-8" ,
-        'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
-}
-    fetch(url,reqCongig)
-      .then((response) => {return response.json();})
-      .then(data => {
-        console.log(data);
-        TeachernameCell.textContent = data.TeacherName;      
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-         
+      let reqCongig = {
+        method: "GET",
+        headers : {
+          "Content-Type" :"application/json;charset=UTF-8" ,
+          'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)
+        }
+      };
+
+      fetch(url,reqCongig)
+        .then((response) => {return response.json();})
+        .then(data => {
+          console.log(data);
+          TeachernameCell.textContent = data.TeacherName;      
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+     else {
+      TeachernameCell.textContent = 'N/A';
+    }
           row.appendChild(idCell);
           row.appendChild(nameCell);
           row.appendChild(DescriptionCell);
