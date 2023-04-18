@@ -41,6 +41,7 @@
                 <li><a href="update_course.html">Update Course</a></li>
                 <li><a href="delete_course.html">Delete Course</a></li>
                 <li><a href="viewAllcourse.html">View Course</a></li>
+                <li><a href="CourseAssigner.html">Assign Teacher To Course</a></li>
               </ul>
             </li>
             <li class="active"><a href="#" class="logout">Log out </a></li>
@@ -68,7 +69,7 @@
     document.getElementById("deleteTeacherForm").addEventListener("submit", (event) => {
       event.preventDefault();
       let id = document.querySelector("#deleteTeacher-id").value;
-      let url = `http://localhost:8080/api/Teacher/${id}`;
+      let url = `http://localhost:8080/api/teacher/${id}`;
       let reqConfig = {
         method: "DELETE",
         headers : {

@@ -1,4 +1,4 @@
-<!-- read_Course.html -->
+<!-- View_Course.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +40,7 @@
                 <li><a href="update_course.html">Update Course</a></li>
                 <li><a href="delete_course.html">Delete Course</a></li>
                 <li><a href="viewAllcourse.html">View Course</a></li>
+                <li><a href="CourseAssigner.html">Assign Teacher To Course</a></li>
               </ul>
             </li>
             <li class="active"><a href="#" class="logout">Log out </a></li>
@@ -59,6 +60,7 @@
             <th>ID</th>
             <th>Name</th>
             <th>Description</th>
+            <th>Teacher Name</th>
           </tr>
         </thead>
         <tbody>
@@ -91,19 +93,46 @@
           const idCell = document.createElement('td');
           const nameCell = document.createElement('td');
           const DescriptionCell = document.createElement('td');
+          const Teacher_idCell = document.createElement('td');
+          const TeachernameCell = document.createElement('td');
           idCell.textContent = course.Courseid;
           nameCell.textContent = course.CourseName;
           DescriptionCell.textContent = course.CourseDescription;
+          Teacher_idCell.textContent = course.teacher_id;
+       
+if (course.teacher_id) {
+      let url = `http://localhost:8080/api/teacher/${course.teacher_id}`;
+      let reqCongig = {
+        method: "GET",
+        headers : {
+          "Content-Type" :"application/json;charset=UTF-8" ,
+          'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)
+        }
+      };
+
+      fetch(url,reqCongig)
+        .then((response) => {return response.json();})
+        .then(data => {
+          console.log(data);
+          TeachernameCell.textContent = data.TeacherName;      
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+     else {
+      TeachernameCell.textContent = 'N/A';
+    }
           row.appendChild(idCell);
           row.appendChild(nameCell);
           row.appendChild(DescriptionCell);
+          row.appendChild(TeachernameCell);
           table.appendChild(row);
         });
       })
       .catch((error) => {
         console.error('Error:', error);
       });
-
       document.querySelector('.logout').addEventListener('click', function(event) {
       event.preventDefault();
       alert(`Are you sure you went to logout?.`);

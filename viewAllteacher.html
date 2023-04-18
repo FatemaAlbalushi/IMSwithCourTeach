@@ -40,6 +40,7 @@
                 <li><a href="update_course.html">Update Course</a></li>
                 <li><a href="delete_course.html">Delete Course</a></li>
                 <li><a href="viewAllcourse.html">View Course</a></li>
+                <li><a href="CourseAssigner.html">Assign Teacher To Course</a></li>
               </ul>
             </li>
             <li class="active"><a href="#" class="logout">Log out </a></li>
@@ -71,7 +72,7 @@
   <script>
     const storedUsername = localStorage.getItem("username");
     const storedPassword = localStorage.getItem("password");
-    let url = "http://localhost:8080/api/Teacher";
+    let url = "http://localhost:8080/api/teacher";
     let table = document.querySelector("#TeacherTable tbody");
     table.innerHTML = '';
 
